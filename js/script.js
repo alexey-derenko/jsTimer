@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', function() {
 
     // Timer
 
-    let deadline = '2019-03-15';
+    let deadline = '2018-03-15';
 
     function checkTime(i) {
         if ( i < 10) {
@@ -52,25 +52,25 @@ window.addEventListener('DOMContentLoaded', function() {
         minutes = Math.floor((t/1000/60)%60),
         hours = Math.floor((t/(1000*60*60)));
 
+      
 
+        if (seconds < 10) {
+            seconds = '0'+ seconds;
+        }
+
+        if (minutes < 10) {
+            minutes = '0'+ minutes;
+        }
+
+        if (hours < 10 ) {
+            hours = '0'+ hours;
+        }
 
         if (Date.parse(endtime) <= Date.parse(new Date())) {
             seconds = '00';
             minutes = '00';
             hours = '00';
 
-        }
-
-        if (seconds < 10 ) {
-            seconds = '0'+ seconds;
-        }
-
-        if (minutes < 10 ) {
-            minutes = '0'+ minutes;
-        }
-
-        if (hours < 10 ) {
-            hours = '0'+ hours;
         }
         
 
